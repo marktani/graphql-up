@@ -56,6 +56,7 @@ This is how it should look like ([see this video tutorial for more details](http
   Options:
     --version, -v   Print version of graphql-up
     --help, -h      Show help message
+    --minimal, -m   Only print URLs of created API
 
 ```
 

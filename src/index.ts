@@ -14,8 +14,6 @@ const {version} = require('../package.json')
 async function main() {
   const argv = minimist(process.argv.slice(2))
 
-  process.stdout.write('\n')
-
   if (argv['help'] || argv['h']) {
     process.stdout.write(usageRoot)
     process.exit(0)
@@ -26,6 +24,8 @@ async function main() {
     process.exit(0)
   }
 
+  const minimalOutput = argv['minimal'] || argv['m']
+
   const schemaProp = argv._[0]
 
   if (!schemaProp) {
@@ -33,9 +33,13 @@ async function main() {
     process.exit(0)
   }
 
-  const spinner = new Spinner(`  ${chalk.blue('%s')}  Creating your GraphQL API... `)
-  spinner.setSpinnerString(Spinner.spinners[20])
-  spinner.start()
+  let spinner
+  if (!minimalOutput) {
+    process.stdout.write('\n')
+    spinner = new Spinner(`  ${chalk.blue('%s')}  Creating your GraphQL API... `)
+    spinner.setSpinnerString(Spinner.spinners[20])
+    spinner.start()
+  }
 
   const schema = await getSchema(schemaProp)
 
@@ -49,7 +53,9 @@ async function main() {
 
   const body = await response.json()
 
-  spinner.stop(true)
+  if (!minimalOutput) {
+    spinner.stop(true)
+  }
 
   if (!response.ok) {
     console.log(`  ${chalk.red(figures.cross)}  There was an error:\n`)
@@ -57,7 +63,12 @@ async function main() {
     process.exit(1)
   }
 
-  const message = `  ${chalk.green(figures.tick)}  Your GraphQL API is ready to use. Here are your endpoints:
+  let message
+  if(minimalOutput) {
+    message = `https://api.graph.cool/simple/v1/${body.project.alias}
+https://api.graph.cool/relay/v1/${body.project.alias}`
+  } else {
+    message = `  ${chalk.green(figures.tick)}  Your GraphQL API is ready to use. Here are your endpoints:
  
     ${chalk.blue(figures.pointer)} Simple API: https://api.graph.cool/simple/v1/${body.project.alias}
     ${chalk.blue(figures.pointer)} Relay API:  https://api.graph.cool/relay/v1/${body.project.alias}
@@ -67,6 +78,7 @@ async function main() {
 
   API Documentation: https://www.graph.cool/docs/graphql-up/
 `
+  }
 
   console.log(message)
 }

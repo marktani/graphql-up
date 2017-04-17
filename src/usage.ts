@@ -14,6 +14,7 @@ export const usageRoot = `  Usage: graphql-up <schema>
   Options:
     --version, -v   Print version of graphql-up
     --help, -h      Show help message
+    --minimal, -m   Only print URLs of created APIs
 
 `
 
