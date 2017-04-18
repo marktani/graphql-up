@@ -3,7 +3,7 @@ type Tweet {
   createdAt: DateTime!
   updatedAt: DateTime!
   text: String!
-  author: User!
+  author: User! @relation(name: "UserTweets")
 }
 
 type User {
@@ -11,5 +11,5 @@ type User {
   createdAt: DateTime!
   updatedAt: DateTime!
   name: String!
-  tweets: [Tweet!]!
+  tweets: [Tweet!]! @relation(name: "UserTweets")
 }
