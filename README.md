@@ -89,8 +89,8 @@ You can easily add a `graphql-up` badge to your own tutorials, docs & examples. 
 
 ## Schema Examples
 
-* [Twitter](examples/twitter.schema)
-* [Instagram](examples/instagram.schema)
+* [Twitter](https://github.com/graphcool/graphql-up/blob/master/examples/twitter.schema)
+* [Instagram](https://github.com/graphcool/graphql-up/blob/master/examples/instagram.schema)
 
 Do you have another interesting example in mind? [Add it here](https://github.com/graphcool/graphql-up/issues/new). 📚
 
