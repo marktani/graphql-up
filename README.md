@@ -4,9 +4,9 @@
 
 ## Features
 
-* 🚀 Get a instant **GraphQL API for your schema**
-* ⚛️ Optimized endpoints for Apollo & Relay
-* 👨‍🏫 Easy to add to your own tutorials, docs & examples
+* 🚀  Get a instant **GraphQL API for your schema**
+* ⚛️  Optimized endpoints for Apollo & Relay
+* 👨‍🏫  Easy to add to your own tutorials, docs & examples
 
 
 ## Quickstart
