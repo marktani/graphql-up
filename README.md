@@ -95,10 +95,6 @@ You can easily add a `graphql-up` badge to your own tutorials, docs & examples. 
 
 Do you have another interesting example in mind? [Add it here](https://github.com/graphcool/graphql-up/issues/new). 📚
 
-## Known limitations
-
-* `enum` types are not supported yet
-
 
 ## Help & Community [![Slack Status](https://slack.graph.cool/badge.svg)](https://slack.graph.cool)
 
