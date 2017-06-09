@@ -70,7 +70,7 @@ graphql-up twitter.schema
 
 
 ```sh
-graphql-up https://raw.githubusercontent.com/graphcool/graphql-up/master/examples/twitter.schema
+graphql-up https://graphqlbin.com/twitter.graphql
 ```
 
 ## How it works
