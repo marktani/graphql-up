@@ -25,14 +25,14 @@ type User {
 }
 ```
 
-Copy the schema above and save it as `twitter.schema`. ([Read more about the IDL syntax](https://www.graph.cool/docs/faq/graphql-schema-definition-idl-kr84dktnp0/).)
+Copy the schema above and save it as `twitter.graphql`. ([Read more about the IDL syntax](https://www.graph.cool/docs/faq/graphql-schema-definition-idl-kr84dktnp0/).)
 
 ```sh
 # Install the CLI via npm (or yarn)
 npm install -g graphql-up
 
 # Create GraphQL API using your local schema file
-graphql-up twitter.schema
+graphql-up twitter.graphql
 ```
 
 This is how it should look like ([see this video tutorial for more details](https://www.youtube.com/watch?v=kWS7SGcp7cY)):
@@ -48,8 +48,8 @@ This is how it should look like ([see this video tutorial for more details](http
     Read more at https://www.graph.cool/graphql-up/
     
   Examples:
-    graphql-up twitter.schema                       # local schema file
-    graphql-up https://example.com/twitter.schema   # fetch schema from URL
+    graphql-up twitter.graphql                          # local schema file
+    graphql-up https://graphqlbin.com/twitter.graphql   # fetch schema from URL
     
     More examples: https://github.com/graphcool/graphql-up
 
@@ -63,7 +63,7 @@ This is how it should look like ([see this video tutorial for more details](http
 ### Local schema file
 
 ```sh
-graphql-up twitter.schema
+graphql-up twitter.graphql
 ```
 
 ### Hosted schema file
@@ -90,8 +90,8 @@ You can easily add a `graphql-up` badge to your own tutorials, docs & examples. 
 
 ## Schema Examples
 
-* [Twitter](https://github.com/graphcool/graphql-up/blob/master/examples/twitter.schema)
-* [Instagram](https://github.com/graphcool/graphql-up/blob/master/examples/instagram.schema)
+* [Twitter](https://github.com/graphcool/graphql-up/blob/master/examples/twitter.graphql)
+* [Instagram](https://github.com/graphcool/graphql-up/blob/master/examples/instagram.graphql)
 
 Do you have another interesting example in mind? [Add it here](https://github.com/graphcool/graphql-up/issues/new). 📚
 
