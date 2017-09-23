@@ -13,13 +13,13 @@
 
 ```graphql
 type Tweet {
-  id: ID!
+  id: ID! @isUnique
   text: String!
   author: User! @relation(name: "Tweets")
 }
 
 type User {
-  id: ID!
+  id: ID! @isUnique
   name: String!
   tweets: [Tweet!]! @relation(name: "Tweets")
 }
